@@ -20,5 +20,5 @@ using System.Xml.Serialization;
 
 namespace Yuma.Messaging.ServiceBus.Xml.Dummies;
 
-[XmlRoot("DummyXml", Namespace = "https://schemas.aprico.be")]
+[XmlRoot("DummyXml", Namespace = "https://schemas.yuma.be")]
 public sealed class FullyQualifiedDummy;
