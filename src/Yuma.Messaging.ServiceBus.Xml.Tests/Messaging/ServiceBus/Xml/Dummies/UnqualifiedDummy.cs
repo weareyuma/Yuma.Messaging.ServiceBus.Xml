@@ -16,18 +16,6 @@
 
 #endregion
 
-using FluentAssertions.Extensibility;
-using Yuma;
+namespace Yuma.Messaging.ServiceBus.Xml.Dummies;
 
-[assembly: AssertionEngineInitializer(typeof(FluentAssertionEngineInitializer), nameof(FluentAssertionEngineInitializer.AcknowledgeSoftWarning))]
-
-namespace Yuma;
-
-// see https://fluentassertions.com/introduction#licensing
-file static class FluentAssertionEngineInitializer
-{
-	public static void AcknowledgeSoftWarning()
-	{
-		License.Accepted = true;
-	}
-}
+internal sealed class UnqualifiedDummy;

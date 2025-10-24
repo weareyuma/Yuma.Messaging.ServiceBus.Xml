@@ -16,18 +16,9 @@
 
 #endregion
 
-using FluentAssertions.Extensibility;
-using Yuma;
+using System.Xml.Serialization;
 
-[assembly: AssertionEngineInitializer(typeof(FluentAssertionEngineInitializer), nameof(FluentAssertionEngineInitializer.AcknowledgeSoftWarning))]
+namespace Yuma.Messaging.ServiceBus.Xml.Dummies;
 
-namespace Yuma;
-
-// see https://fluentassertions.com/introduction#licensing
-file static class FluentAssertionEngineInitializer
-{
-	public static void AcknowledgeSoftWarning()
-	{
-		License.Accepted = true;
-	}
-}
+[XmlRoot(Namespace = "https://schemas.aprico.be")]
+public sealed class PartiallyQualifiedDummy;
